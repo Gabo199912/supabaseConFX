@@ -1,0 +1,6 @@
+.boton-Ingresar{
+    -fx-background-color: #213f6a;
+    -fx-text-fill: white;
+    -fx-padding: 7;
+    -fx-background-radius: 10px;
+}

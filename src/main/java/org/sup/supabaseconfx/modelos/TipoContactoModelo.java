@@ -1,8 +1,12 @@
 package org.sup.supabaseconfx.modelos;
 
-public class ContactoModelo {
+public class TipoContactoModelo {
     private int id;
     private String tipo;
+
+    public TipoContactoModelo(String tipo) {
+        this.tipo = tipo;
+    }
 
     // Getters y Setters
     public int getId() {
