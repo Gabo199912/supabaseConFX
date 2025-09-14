@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.sup.supabaseconfx.controladores.CrearUsuarioControlador"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="406.0" prefWidth="336.0" style="-fx-background-color: #ab8ae5;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sup.supabaseconfx.controladores.CrearUsuarioControlador">
+   <children>
+      <AnchorPane prefHeight="75.0" prefWidth="336.0" style="-fx-background-color: #213f6a;">
+         <children>
+            <Label layoutX="49.0" layoutY="28.0" text="FORMULARIO DE CREACION" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <TextField fx:id="txtEmail" layoutX="63.0" layoutY="155.0" promptText="EMAIL" styleClass="IngresoDatos" stylesheets="@../../../Estilos/EstilosTextField.css">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="txtConfirmContra" layoutX="63.0" layoutY="255.0" prefHeight="38.0" prefWidth="211.0" promptText="CONFIRMAR CONTRASEÑA" styleClass="IngresoDatos" stylesheets="@../../../Estilos/EstilosTextField.css">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </PasswordField>
+      <TextField fx:id="txtUsuario" layoutX="63.0" layoutY="105.0" promptText="USUARIO" styleClass="IngresoDatos" stylesheets="@../../../Estilos/EstilosTextField.css">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <Button layoutX="117.0" layoutY="330.0" mnemonicParsing="false" onAction="#crearNuevoUsuario" styleClass="boton-Ingresar" stylesheets="@../../../Estilos/EstilosBotones.css" text="CREAR USUARIO" />
+      <TextField fx:id="txtContra" layoutX="63.0" layoutY="203.0" promptText="CONTRASEÑA" styleClass="IngresoDatos" stylesheets="@../../../Estilos/EstilosTextField.css">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+   </children>
 </AnchorPane>

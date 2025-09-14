@@ -10,6 +10,7 @@ module org.sup.supabaseconfx {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires java.sql;
+    requires javafx.graphics;
 
     opens org.sup.supabaseconfx to javafx.fxml;
     opens org.sup.supabaseconfx.modelos to javafx.base;

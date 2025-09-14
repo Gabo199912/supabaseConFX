@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 import java.util.Properties;
 
 public class BaseDatos {
-    //PARTE POSTGRES LOCAL
+    //PARTE MySq LOCAL
     private static final Properties props = new Properties();
 
     static {

@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="327.0" fx:controller="org.sup.supabaseconfx.controladores.LoginControlador" style="-fx-background-color: #ab8ae5;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="327.0" style="-fx-background-color: #ab8ae5;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sup.supabaseconfx.controladores.LoginControlador">
    <children>
       <AnchorPane prefHeight="63.0" prefWidth="327.0" style="-fx-background-color: #213f6a;">
          <children>
@@ -16,18 +16,18 @@
             </Label>
          </children>
       </AnchorPane>
-      <TextField layoutX="58.0" layoutY="160.0" promptText="USUARIO">
+      <TextField fx:id="txtUsuarioLogin" layoutX="58.0" layoutY="160.0" promptText="USUARIO" styleClass="IngresoDatos" stylesheets="@../../../Estilos/EstilosTextField.css">
          <font>
             <Font name="Arial" size="17.0" />
          </font>
       </TextField>
-      <PasswordField layoutX="58.0" layoutY="210.0" promptText="CONTRASEÑA">
+      <PasswordField fx:id="txtContrasenia" layoutX="58.0" layoutY="210.0" promptText="CONTRASEÑA" styleClass="IngresoDatos" stylesheets="@../../../Estilos/EstilosTextField.css">
          <font>
             <Font name="Arial" size="17.0" />
          </font>
       </PasswordField>
-      <Button layoutX="128.0" layoutY="278.0" mnemonicParsing="false" styleClass="boton-Ingresar" stylesheets="@../../../Estilos/EstilosBotones.css" text="INGRESAR" />
-      <Button layoutX="207.0" layoutY="338.0" mnemonicParsing="false" onAction="#vistaCrearUsuario" styleClass="boton-Ingresar" stylesheets="@../../../Estilos/EstilosBotones.css" text="CREAR USUARIO" />
+      <Button layoutX="128.0" layoutY="278.0" mnemonicParsing="false" onAction="#ingresar" styleClass="boton-Ingresar" stylesheets="@../../../Estilos/EstilosBotones.css" text="INGRESAR" />
+      <Button layoutX="177.0" layoutY="340.0" mnemonicParsing="false" onAction="#vistaCrearUsuario" styleClass="boton-Ingresar" stylesheets="@../../../Estilos/EstilosBotones.css" text="CREAR USUARIO" />
       <ImageView fitHeight="63.0" fitWidth="77.0" layoutX="131.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../img/id_login.png" />
