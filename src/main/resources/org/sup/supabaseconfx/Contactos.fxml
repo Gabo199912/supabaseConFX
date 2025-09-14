@@ -11,15 +11,25 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="1.0" layoutY="167.0" prefHeight="161.0" prefWidth="404.0" stylesheets="@../../../Estilos/EstilosTablas.css">
+                        <TableView fx:id="TableContactos" layoutX="1.0" layoutY="167.0" prefHeight="196.0" prefWidth="404.0" stylesheets="@../../../Estilos/EstilosTablas.css">
                           <columns>
-                            <TableColumn prefWidth="37.19998240470886" text="ID" />
-                            <TableColumn prefWidth="99.60000228881836" text="NOMBRE" />
-                              <TableColumn prefWidth="89.20001220703125" text="TELEFONO" />
-                              <TableColumn prefWidth="107.19999694824219" text="EMAIL" />
-                              <TableColumn prefWidth="80.800048828125" text="TIPO" />
+                            <TableColumn fx:id="idColumn" prefWidth="37.19998240470886" text="ID" />
+                            <TableColumn fx:id="nombreColumn" prefWidth="99.60000228881836" text="NOMBRE" />
+                              <TableColumn fx:id="telefonoColumn" prefWidth="89.20001220703125" text="TELEFONO" />
+                              <TableColumn fx:id="emailColumn" prefWidth="96.0" text="EMAIL" />
+                              <TableColumn fx:id="categoriaColumn" minWidth="7.0" prefWidth="62.0" text="CATEG" />
                           </columns>
                         </TableView>
+                        <TextField fx:id="txtNombreContacto" layoutX="14.0" layoutY="20.0" prefHeight="26.0" prefWidth="108.0" promptText="NOMBRE" styleClass="IngresoDatos" stylesheets="@../../../Estilos/EstilosTextField.css" />
+                        <TextField fx:id="txtTelefonoContacto" layoutX="14.0" layoutY="55.0" prefHeight="26.0" prefWidth="108.0" promptText="TELEFONO" styleClass="IngresoDatos" stylesheets="@../../../Estilos/EstilosTextField.css" />
+                        <TextField fx:id="txtEmailContacto" layoutX="129.0" layoutY="21.0" promptText="EMAIL" styleClass="IngresoDatos" stylesheets="@../../../Estilos/EstilosTextField.css" />
+                        <SplitMenuButton fx:id="btnCategoriaContacto" layoutX="129.0" layoutY="56.0" mnemonicParsing="false" stylesheets="@../../../Estilos/EstilosSplitMenu.css">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                        </SplitMenuButton>
+                        <Button layoutX="14.0" layoutY="98.0" mnemonicParsing="false" onAction="#crearContacto" styleClass="boton-Ingresar" stylesheets="@../../../Estilos/EstilosBotones.css" text="AGREGAR CONTACTO" />
                      </children>
                   </AnchorPane>
             </content>
@@ -28,15 +38,15 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="14.0" layoutY="137.0" prefHeight="223.0" prefWidth="252.0">
+                        <TableView fx:id="TableTipocontacto" layoutX="14.0" layoutY="137.0" prefHeight="223.0" prefWidth="252.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="ID" />
-                            <TableColumn prefWidth="176.00000762939453" text="NOMBRE CATEGORIA" />
+                            <TableColumn fx:id="columnIdCategoria" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="columnNombreCategoria" prefWidth="176.00000762939453" text="NOMBRE CATEGORIA" />
                           </columns>
                         </TableView>
-                        <TextField layoutX="14.0" layoutY="23.0" promptText="NOMBRE CATEGORIA" styleClass="IngresoDatos" stylesheets="@../../../Estilos/EstilosTextField.css" />
+                        <TextField fx:id="txtNombreTipoCategoria" layoutX="14.0" layoutY="23.0" promptText="NOMBRE CATEGORIA" styleClass="IngresoDatos" stylesheets="@../../../Estilos/EstilosTextField.css" />
                         <Label layoutX="80.0" layoutY="109.0" text="LISTA DE CATEGORIAS" />
-                        <Button layoutX="21.0" layoutY="65.0" mnemonicParsing="false" styleClass="boton-Ingresar" stylesheets="@../../../Estilos/EstilosBotones.css" text="AGREGAR" />
+                        <Button layoutX="21.0" layoutY="65.0" mnemonicParsing="false" onAction="#crearTipoContacto" styleClass="boton-Ingresar" stylesheets="@../../../Estilos/EstilosBotones.css" text="AGREGAR" />
                      </children></AnchorPane>
             </content>
           </Tab>

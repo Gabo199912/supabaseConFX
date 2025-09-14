@@ -4,6 +4,11 @@ public class TipoContactoModelo {
     private int id;
     private String tipo;
 
+    public TipoContactoModelo(int id, String tipo) {
+        this.id = id;
+        this.tipo = tipo;
+    }
+
     public TipoContactoModelo(String tipo) {
         this.tipo = tipo;
     }
